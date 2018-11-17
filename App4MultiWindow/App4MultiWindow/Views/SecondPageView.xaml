@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:App4MultiWindow.ViewModels"
+             x:Class="App4MultiWindow.Views.SecondPageView">
+    <ContentPage.BindingContext>
+        <vm:SecondPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Message}" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+            <Button Command="{Binding MapLauch}" Text="Do we follow me?"/>
+            <Button Command="{Binding PrevCommand}" Text="Prev"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
